@@ -72,8 +72,16 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 20px;
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 2s, opacity 3s, margin 250ms ease;
 }
 
+.age-calc.expand{
+    
+}
 .age-calc .age-box {
     position: relative;
     background: #fff;
@@ -127,4 +135,31 @@ body {
         padding: 30px 20px;
         font-size: 1rem;
     }
+}
+
+@media (max-width: 600px)
+{
+    .box{
+        width: 300px;
+    }
+    .box .date-picker{
+        display: block;
+    }
+    .box .date-picker input{
+        margin: 10px 0;
+        width: 100%;
+    }
+    .age-calc  .age-box{
+        width: 120px;
+        margin: 5px ;
+    }
+    .age-calc .age-box p.header{
+        padding: 10px 5xp;
+        font-size: .8rem;
+    }
+    .age-calc .age-box .value{
+        padding: 30px 5px;
+        font-size: .9rem;
+    }
+
 }
